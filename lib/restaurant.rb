@@ -51,9 +51,9 @@ class Restaurant
     #Refactored Solution
     closing_time_24_hour_int = closing_time(hours_open_for).to_i
     if closing_time_24_hour_int < 13
-      return "#{name} will be closing at #{closing_time_24_hour_int.to_s}:00AM"
+      "#{name} will be closing at #{closing_time_24_hour_int.to_s}:00AM"
     else
-      return "#{name} will be closing at #{(closing_time_24_hour_int - 12).to_s}:00PM"
+      "#{name} will be closing at #{(closing_time_24_hour_int - 12).to_s}:00PM"
     end
   end
 end
