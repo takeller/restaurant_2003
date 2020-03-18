@@ -15,5 +15,19 @@ class Restaurant
 
   def add_dish(dish)
     @dishes << dish
-  end 
+  end
+
+  def open_for_lunch?
+    return true unless @opening_time.to_i > 11
+    false
+  end
+
+  def menu_dish_names
+    menu_dish_names = []
+
+    @dishes.each do |dish|
+      menu_dish_names << dish.upcase
+    end
+    menu_dish_names
+  end
 end
