@@ -30,4 +30,15 @@ class Restaurant
     end
     menu_dish_names
   end
+
+  def announce_closing_time(hours_open_for)
+    closing_time_24_hour = closing_time(hours_open_for)
+    if closing_time_24_hour.to_i < 13
+      closing_time_12_hour = closing_time_24_hour.to_i
+      return "#{name} will be closing at #{closing_time_12_hour.to_s}:00AM"
+    else
+      closing_time_12_hour = closing_time_24_hour.to_i - 12
+      return "#{name} will be closing at #{closing_time_12_hour.to_s}:00PM"
+    end
+  end
 end
